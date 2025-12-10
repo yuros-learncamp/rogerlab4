@@ -1,0 +1,10 @@
+NAME="Testing Room 1"
+PRETTY_NAME="Testing Room 1"
+ID=testing1
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://testing1.yuros.org"
+DOCUMENTATION_URL="https://testing1.yuros.org/docs"
+SUPPORT_URL="https://testing1.yuros.org/forum"
+BUG_REPORT_URL="https://testing1.yuros.org/issues"
+PRIVACY_POLICY_URL="https://testing1.yuros.org/privacy"
+LOGO=falcone-linux
