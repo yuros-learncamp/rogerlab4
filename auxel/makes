@@ -112,6 +112,25 @@ function raptor_disks_make() {
     raptor_disks_make_home
 }
 
+## PREV PARTITION
+function raptor_disks_prev() {
+    
+    clear &&
+    echo "Storage Information preview"
+    echo "--------------------------------"
+    echo "boot path : $bootpath"
+    echo "root path : $rootpath"
+    echo "swap path : $swappath"
+    echo "home path : $homepath"
+    echo "--------------------------------"
+    read -p 'Type "YES" on capital letter to continue or "NO" to abort installation' confirmdiskpartition
+
+    if [[ $confirmdiskpartition != "YES" ]];then
+        echo "Proccess cancelation by user"
+        exit 1
+    fi
+} 
+
 ## FORM PARTITION
 function raptor_disks_form_boot() {
     echo "format boot partition"
@@ -178,6 +197,7 @@ function raptor_disks_prep() {
     clear && echo "Partition configuration"
     raptor_disks_init &&
     raptor_disks_make &&
+    raptor_disks_prev &&
     raptor_disks_form &&
     raptor_disks_mont &&
     echo "configration done"

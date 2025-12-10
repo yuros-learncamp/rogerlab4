@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="Testing Room 1"
-iso_label="testing1_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
-iso_publisher="Testing Room 1 <https://blackroom.yuros.org/blezing>"
-iso_application="Testing Room 1 Recovery"
+iso_name="Tester 4"
+iso_label="tester4_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
+iso_publisher="Tester 4 <https://blackroom.yuros.org/blezing>"
+iso_application="Tester 4 Recovery"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
