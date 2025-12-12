@@ -438,9 +438,8 @@ function raptor_mitig_post() {
 
 function raptor_neter_post_srvc() {
     arch-chroot /mnt systemctl enable sshd
-    arch-chroot /mnt systemctl enable NetworkManager
-    arch-chroot /mnt systemctl enable dnsmasq
-    arch-chroot /mnt systemctl disable NetworkManager-wait-online.service
+    arch-chroot /mnt systemctl enable connman.service
+    arch-chroot /mnt systemctl enable systemd-resolved.service
 }
 
 function raptor_neter_post() {

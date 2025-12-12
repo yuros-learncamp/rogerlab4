@@ -1,8 +1,7 @@
 linux-lts
 mkinitcpio
 sbctl
-networkmanager
-dnsmasq
+econnman
 openssh
 pipewire
 wireplumber
@@ -23,8 +22,6 @@ evisum
 rage
 firefox
 terminology
-networkmanager
-network-manager-applet
 bluez
 blueman
 firewalld
