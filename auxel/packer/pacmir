@@ -1,7 +1,7 @@
 linux-lts
 mkinitcpio
 sbctl
-econnman
+connman
 openssh
 pipewire
 wireplumber
