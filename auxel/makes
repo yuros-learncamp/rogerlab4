@@ -241,9 +241,15 @@ function raptor_cores_prep() {
     craine_cores_post_config
 }
 
+function raptor_kerns_prep_pure() {
+    rm -f /mnt/etc/mkinitcpio.conf &&
+    rm -fr /mnt/etc/mkinitcpio.conf.d 
+}
+
 function raptor_kerns_prep() {
     sleep 2 && clear
     echo "Kernel module installation"
+    raptor_kerns_prep_pure
 }
 
 function raptor_boots_prep() {
@@ -419,15 +425,17 @@ function raptor_audio_post() {
 
 
 
-function raptor_deskt_post_srvc() {
-    arch-chroot /mnt systemctl enable sddm.service
+function raptor_deskt_post_serve() {
+    arch-chroot /mnt systemctl enable lxdm.service
     arch-chroot /mnt systemctl enable bluetooth.service
 }
+
+
 
 function raptor_deskt_post() {
     sleep 2 && clear
     echo "Desktop module configuration"
-    raptor_deskt_post_srvc
+    raptor_deskt_post_serve
     echo "Desktop module configured"
 }
 
