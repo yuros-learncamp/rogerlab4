@@ -440,16 +440,17 @@ function raptor_mitig_post() {
     echo "Mitigation module configuration"
 }
 
-function raptor_neter_post_serve() {
+function raptor_neter_post_srvc() {
     arch-chroot /mnt systemctl enable sshd
     arch-chroot /mnt systemctl enable NetworkManager
     arch-chroot /mnt systemctl enable dnsmasq
+    arch-chroot /mnt systemctl disable NetworkManager-wait-online.service
 }
 
 function raptor_neter_post() {
     sleep 2 && clear
     echo "Network module configuration"
-    raptor_neter_post_serve
+    raptor_neter_post_srvc
 }
 
 function raptor_secur_post_serve() {
