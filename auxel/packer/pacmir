@@ -1,9 +1,9 @@
 linux-zen
 mkinitcpio
 sbctl
-connman
+networkmanager
+dnsmasq
 openssh
-wpa_supplicant
 pipewire
 wireplumber
 pipewire-audio
@@ -12,6 +12,7 @@ alsa-firmware
 pipewire-pulse
 pipewire-jack
 pipewire-alsa
+sddm
 sugar
 sugar-fructose
 firewalld
