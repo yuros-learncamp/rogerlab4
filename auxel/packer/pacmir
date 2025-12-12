@@ -14,8 +14,8 @@ pipewire-jack
 pipewire-alsa
 sddm
 lxqt
-kwin
 yakuake
+xorg-server
 oxygen-icons
 qt5-declarative
 lxqt-wayland-session
